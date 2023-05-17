@@ -70,3 +70,5 @@ You can then navigate through the gallery, explore each challenge, and view the 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+Note: The designs provided in the Figma files are the property of Rocketseat. Please refer to the Rocketseat's terms and conditions for the usage rights of the designs.
