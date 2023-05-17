@@ -2,6 +2,10 @@
 
 This project is a simple gallery showcasing the challenges from Rocketseat's Discover path. The goal is to practice and apply the frontend development process from start to finish, starting with the provided Figma designs and then implementing them using HTML, CSS, and JavaScript, without any frameworks.
 
+## Live Demo
+
+Access the live demo of the project [here](https://lucastenani.github.io/from-figma-to-frontend/).
+
 ## Overview
 
 The Discover path from Rocketseat offers a series of challenges for frontend developers, ranging from beginner to advanced levels. Each challenge comes with its own Figma design, which serves as a visual reference for implementing the frontend components and layout.
