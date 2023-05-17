@@ -38,13 +38,13 @@ The project follows a folder structure where each challenge has its own dedicate
 In the terminal, clone the project:
 
 ```
-git clone https://github.com/lucastenani/ecommerce-website
+git clone https://github.com/lucastenani/from-figma-to-frontend.git
 ```
 
 Enter the folder:
 
 ```
-cd ecommerce-website/
+cd from-figma-to-frontend/
 ```
 
 #### Linux:
