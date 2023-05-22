@@ -15,7 +15,7 @@ header {
   background: #09090a;
   border-bottom: 1px solid rgb(41, 41, 46);
   border-top: 1px solid rgb(41, 41, 46);
-  padding: 20px 0;
+  padding: 15px 0;
   margin: 20px 0 35px;
 }
 
@@ -36,4 +36,10 @@ main {
   width: 100%;
   margin: 0 auto;
   display: flex;
+}
+
+@media (max-width: 1220px) {
+  header {
+    text-align: center;
+  }
 }
