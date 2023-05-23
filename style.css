@@ -28,7 +28,7 @@ header section {
   max-width: 76rem;
   width: 100%;
   margin: 0 auto;
-  padding: 5px 0;
+  padding: 5px 20px;
 }
 
 h1 {
@@ -40,6 +40,7 @@ main {
   max-width: 76rem;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,7 +51,7 @@ main {
 
 .challenge {
   max-width: 388px;
-  width: 33%;
+  width: 32%;
   border-radius: 0px 0px 5px 5px;
   color: rgb(168, 168, 179);
   background-color: rgb(32, 32, 36);
@@ -83,6 +84,7 @@ main {
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .challengeDescription ul li {
@@ -100,12 +102,31 @@ main {
 }
 
 @media (max-width: 1220px) {
+  main {
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 700px) {
   header {
     text-align: center;
   }
 
   main {
-    padding: 0px 20px;
     justify-content: center;
+  }
+
+  .challenge {
+    width: 46%;
+  }
+}
+
+@media (max-width: 550px) {
+  main {
+    gap: 1rem;
+  }
+
+  .challenge {
+    width: 100%;
   }
 }
