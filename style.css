@@ -58,25 +58,25 @@ main {
   cursor: pointer;
 }
 
-.challengeImage {
+.challenge-thumbnail {
   width: 100%;
   border-radius: 5px 5px 0px 0px;
 }
 
-.challengeDescription {
+.challenge-description {
   padding: 1rem;
 }
 
-.challengeDescription h2 {
+.challenge-description h2 {
   font-size: 1.25rem;
 }
 
-.challengeDescription p {
+.challenge-description p {
   font-size: 1rem;
   margin-top: 0.62rem;
 }
 
-.challengeDescription ul {
+.challenge-description ul {
   list-style: none;
   margin-top: 0.65rem;
   display: flex;
@@ -87,7 +87,7 @@ main {
   flex-wrap: wrap;
 }
 
-.challengeDescription ul li {
+.challenge-description ul li {
   background-color: #323238;
   padding: 0 12px;
   height: 28px;
