@@ -122,7 +122,7 @@ main {
   }
 
   main {
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 1rem;
   }
 
@@ -134,6 +134,7 @@ main {
 
 @media (max-width: 550px) {
   main {
+    justify-content: center;
     gap: 1rem;
   }
 
