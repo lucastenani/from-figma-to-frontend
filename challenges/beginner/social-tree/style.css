@@ -16,12 +16,11 @@ body {
 
 main {
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 20px auto 60px;
 }
 
 a,
