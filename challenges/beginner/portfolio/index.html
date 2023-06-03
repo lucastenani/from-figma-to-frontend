@@ -4,10 +4,256 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Social Tree</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Porfolio Page</h1>
+    <div class="container">
+      <aside>
+        <div class="portfolio-section portfolio-profile">
+          <img
+            src="./images/profileImg.jpg"
+            alt="Profile photo of Lucas Tenani"
+            class="portfolio-profile-img"
+          />
+          <h1 class="portfolio-profile-name">Lucas Tenani</h1>
+          <p class="portfolio-profile-position">Front End Developer</p>
+        </div>
+        <div class="portfolio-section portfolio-profile-links">
+          <div class="portfolio-link">
+            <img
+              src="./images/map-pin.svg"
+              alt="Map Icon"
+              class="portfolio-link-img"
+            />
+            <p>Brazil</p>
+          </div>
+          <div class="portfolio-link">
+            <img
+              src="./images/briefcase.svg"
+              alt="Case Icon"
+              class="portfolio-link-img"
+            />
+            <p>Rocketseat</p>
+          </div>
+          <a
+            href="https://github.com/lucastenani"
+            target="_blank"
+            rel="noopener"
+            class="portfolio-link"
+          >
+            <img
+              src="./images/github.svg"
+              alt="Github Icon"
+              class="portfolio-link-img"
+            />
+            <p>lucastenani</p>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lucas-tenani-313b9b15a/"
+            target="_blank"
+            rel="noopener"
+            class="portfolio-link"
+          >
+            <img
+              src="./images/linkedin.svg"
+              alt="Linkedin Icon"
+              class="portfolio-link-img"
+            />
+            <p>lucas-tenani</p>
+          </a>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="noopener"
+            class="portfolio-link"
+          >
+            <img
+              src="./images/twitter.svg"
+              alt="Twitter Icon"
+              class="portfolio-link-img"
+            />
+            <p>TenaniDev</p>
+          </a>
+          <a
+            href="https://github.com/lucastenani"
+            target="_blank"
+            rel="noopener"
+            class="portfolio-link"
+          >
+            <img
+              src="./images/globe.svg"
+              alt="Globe Icon"
+              class="portfolio-link-img"
+            />
+            <p>https://tenanilucas.dev</p>
+          </a>
+          <a
+            href="mailto:lucas.tenani3@gmail.com"
+            target="_blank"
+            rel="noopener"
+            class="portfolio-link"
+          >
+            <img
+              src="./images/mail.svg"
+              alt="E-mail Icon"
+              class="portfolio-link-img"
+            />
+            <p>lucas.tenani3@gmail.com</p>
+          </a>
+        </div>
+        <div class="portfolio-section portfolio-tech">
+          <p class="portfolio-section-title">Technologies</p>
+          <div class="portfolio-tech-stacks">
+            <p>JavaScript</p>
+            <p>ReactJS</p>
+            <p>NodeJS</p>
+            <p>Git</p>
+            <p>GitHub</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Elixir</p>
+            <p>React Native</p>
+          </div>
+        </div>
+        <div class="portfolio-section portfolio-lists">
+          <p class="portfolio-section-title">Experiences</p>
+          <ul>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - Present</p>
+              <p>Community Experience</p>
+            </li>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - Present</p>
+              <p>Community Experience</p>
+            </li>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - Present</p>
+              <p>Community Experience</p>
+            </li>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - Present</p>
+              <p>Community Experience</p>
+            </li>
+          </ul>
+        </div>
+        <div class="portfolio-section portfolio-lists">
+          <p class="portfolio-section-title">Education</p>
+          <ul>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - 2019</p>
+              <p>GoStack</p>
+            </li>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - 2020</p>
+              <p>Ignite</p>
+            </li>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - 2021</p>
+              <p>Ignite Pro</p>
+            </li>
+            <li class="portfolio-list">
+              <p class="portfolio-list-title">Rocketseat</p>
+              <p>2019 - 2021</p>
+              <p>Ignite Pro</p>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <main>
+        <div class="portfolio-section portfolio-my-projects">
+          <h2 class="portfolio-my-projects-title">My Projects</h2>
+          <p class="portfolio-my-projects-text">See all</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-section portfolio-project">
+            <div class="portfolio-project-name">
+              <img src="./images/folder.svg" alt="Folder Icon" />
+              <p>my-onix</p>
+            </div>
+            <p class="portfolio-project-description">
+              Check the error codes that appear on the Onix vehicle dashboard.
+            </p>
+            <div class="portfolio-project-details">
+              <div class="portfolio-project-details-grid">
+                <div class="portfolio-project-details-favs">
+                  <img src="./images/star.svg" alt="Star Icon" />
+                  <p>100</p>
+                </div>
+                <div class="portfolio-project-details-favs">
+                  <img src="./images/git-branch.svg" alt="Branch Icon" />
+                  <p>100</p>
+                </div>
+              </div>
+              <div class="portfolio-project-details-stack">
+                <img src="./images/eclipse.svg" alt="Eclipse Icon" />
+                <p>JavaScript</p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-section portfolio-project">
+            <div class="portfolio-project-name">
+              <img src="./images/folder.svg" alt="Folder Icon" />
+              <p>my-onix</p>
+            </div>
+            <p class="portfolio-project-description">
+              Check the error codes that appear on the Onix vehicle dashboard.
+            </p>
+            <div class="portfolio-project-details">
+              <div class="portfolio-project-details-grid">
+                <div class="portfolio-project-details-favs">
+                  <img src="./images/star.svg" alt="Star Icon" />
+                  <p>100</p>
+                </div>
+                <div class="portfolio-project-details-favs">
+                  <img src="./images/git-branch.svg" alt="Branch Icon" />
+                  <p>100</p>
+                </div>
+              </div>
+              <div class="portfolio-project-details-stack">
+                <img src="./images/eclipse.svg" alt="Eclipse Icon" />
+                <p>JavaScript</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-section portfolio-my-projects">
+          <h2 class="portfolio-my-projects-title">Recent Posts</h2>
+        </div>
+
+        <div class="portfolio-section portfolio-post">
+          <img
+            src="./images/profileImg.jpg"
+            alt="Profile Photo"
+            class="portfolio-post-img"
+          />
+          <div class="portfolio-post-details">
+            <h3 class="portfolio-post-details-title">
+              Error adb devices in Genymotion and Android Studio (React Native)
+            </h3>
+            <p class="portfolio-post-details-date">2 years ago</p>
+            <p class="portfolio-post-details-text">
+              Error adb devices in Genymotion and Android Studio (React Native)
+            </p>
+            <div class="portfolio-post-details-grid">
+              <p>#react-native</p>
+              <p>#genymotion</p>
+              <p>#genymotion</p>
+              <p>#genymotion</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
