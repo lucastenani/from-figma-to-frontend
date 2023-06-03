@@ -1,3 +1,341 @@
-h1 {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+  --border-color: #00ff00;
+  --black-color: #000000;
+  --pattern-font: "Merriweather Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: var(--body-bg-color);
+}
+
+div.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+}
+
+aside,
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+aside {
+  width: 348px;
+}
+
+main {
+  width: 785px;
+}
+
+div.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--bg-cards);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+}
+
+.portfolio-section-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+::marker {
+  font-family: var(--pattern-font);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+div.portfolio-profile {
+  align-items: center;
+}
+
+img.portfolio-profile-img {
+  width: 128px;
+  height: 128px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+h1.portfolio-profile-name {
+  font-weight: 700;
+  font-size: 1.4375rem;
+  line-height: 1.8125rem;
+  margin-bottom: 10px;
+}
+
+p.portfolio-profile-position {
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+div.portfolio-profile-links {
+  gap: 20px;
+}
+
+.portfolio-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+img.portfolio-link-img,
+.portfolio-link p {
+  transition: all 0.3s ease-in-out;
+}
+
+img.portfolio-link-img:hover,
+.portfolio-link p:hover {
+  transform: scale(1.07);
+}
+
+div.portfolio-tech {
+  gap: 20px;
+}
+
+div.portfolio-tech-stacks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+div.portfolio-tech-stacks p {
+  font-weight: 700;
+  font-size: 0.625rem;
+  line-height: 0.8125rem;
+  text-transform: uppercase;
+  color: var(--black-color);
+  background: var(--bg-techs);
+  border-radius: 30px;
+  width: 86px;
+  padding: 7px;
+  text-align: center;
+}
+
+div.portfolio-lists ul {
+  padding: 20px 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+li.portfolio-list {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+p.portfolio-list-title {
+  font-weight: 700;
+}
+
+div.portfolio-my-projects {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2.portfolio-my-projects-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+}
+
+p.portfolio-my-projects-p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+div.portfolio-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: nowrap;
+}
+
+div.portfolio-project-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+div.portfolio-project-name p {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+p.portfolio-project-description {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 40px;
+}
+
+div.portfolio-project-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.portfolio-project-details-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+div.portfolio-project-details-favs,
+div.portfolio-project-details-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+div.portfolio-post {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+img.portfolio-post-img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+h3.portfolio-post-details-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  margin-bottom: 5px;
+}
+
+p.portfolio-post-details-date {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  margin-bottom: 28px;
+}
+
+p.portfolio-post-details-text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 11px;
+}
+
+div.portfolio-post-details-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+div.portfolio-post-details-grid p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  div.container {
+    padding: 15px 6px;
+    gap: 30px;
+  }
+
+  aside {
+    width: 30%;
+  }
+
+  main {
+    width: 60%;
+  }
+
+  div.portfolio-section {
+    padding: 20px;
+  }
+
+  .portfolio-link {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  img.portfolio-link-img {
+    width: 19px;
+  }
+
+  div.portfolio-lists ul {
+    padding: 20px 0 0 30px;
+  }
+
+  div.portfolio-grid {
+    flex-wrap: wrap;
+  }
+
+  div.portfolio-post {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img.portfolio-post-img {
+    width: 95px;
+    height: 95px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  div.container {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  main,
+  aside {
+    width: 100%;
+  }
 }
