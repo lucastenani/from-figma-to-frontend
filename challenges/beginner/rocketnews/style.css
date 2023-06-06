@@ -11,3 +11,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: var(--body-bg-color);
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  width: 55%;
+  position: relative;
+}
+
+aside {
+  width: 45%;
+  height: 100%;
+}
+
+aside img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75%;
+}
