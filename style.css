@@ -43,8 +43,8 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1.1rem;
+  justify-content: space-between;
+  row-gap: 1.1rem;
   flex-wrap: wrap;
 }
 
@@ -109,20 +109,15 @@ main {
   gap: 0.3rem;
 }
 
-@media (max-width: 1220px) {
-  main {
-    gap: 0.7rem;
-  }
-}
-
 @media (max-width: 786px) {
   header {
     text-align: center;
   }
 
   main {
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0 1rem;
+    row-gap: 2rem;
   }
 
   .challenge {
