@@ -25,6 +25,16 @@ body {
 main {
   width: 55%;
   position: relative;
+  padding: 50px 30px;
+}
+
+.rocket-logo {
+  width: 389px;
+  margin-bottom: 92px;
+}
+
+.rocket-logo img {
+  width: 100%;
 }
 
 aside {
