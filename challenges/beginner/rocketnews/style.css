@@ -44,6 +44,7 @@ main {
   flex-direction: column;
   gap: 9px;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -68,6 +69,44 @@ h2 {
   font-size: 14px;
   line-height: 19px;
   color: var(--text-color);
+}
+
+.rocket-email {
+  position: relative;
+}
+
+label {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--form-color);
+}
+
+.rocket-email-input {
+  display: flex;
+  flex-direction: row;
+  border-left: 5px solid var(--title-color);
+  position: absolute;
+  width: 60vw;
+  top: 35px;
+  left: 0;
+}
+
+input {
+  flex: 1;
+  border: 0;
+  padding: 17px 15px;
+}
+
+button {
+  width: 48px;
+  border: 0;
+  background: var(--bg-button-color);
+}
+
+button img {
+  fill: red;
 }
 
 aside {
