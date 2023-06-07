@@ -30,12 +30,12 @@ main {
   padding: 50px 30px;
 }
 
-.rocket-logo {
+header {
   max-width: 389px;
   margin-bottom: 92px;
 }
 
-.rocket-logo img {
+header img {
   width: 100%;
 }
 
