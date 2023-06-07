@@ -25,7 +25,7 @@ body {
 }
 
 main {
-  width: 45%;
+  width: 50%;
   position: relative;
   padding: 50px 30px;
 }
@@ -73,6 +73,7 @@ h2 {
 
 .rocket-email {
   position: relative;
+  margin-bottom: 130px;
 }
 
 label {
@@ -109,8 +110,36 @@ button img {
   fill: red;
 }
 
+.rocket-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rocket-link a {
+  font-family: "Spartan";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--bg-button-color);
+  text-decoration: none;
+  transition: transform 0.5s ease-in;
+}
+
+.rocket-link a::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url("./images/arrow-right.svg");
+}
+
+.rocket-link:hover a {
+  transform: scale(1.2);
+}
+
 aside {
-  width: 55%;
+  width: 50%;
   height: 100%;
 }
 
