@@ -25,7 +25,7 @@ body {
 }
 
 main {
-  max-width: 720px;
+  width: 45%;
   position: relative;
   padding: 50px 30px;
 }
@@ -71,6 +71,7 @@ h2 {
 }
 
 aside {
+  width: 55%;
   height: 100%;
 }
 
