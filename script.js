@@ -36,7 +36,7 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "challenges/beginner/login-form-css/",
+    link: "challenges/intermediate/login-form-css/",
     thumbnail: "assets/images/login-form-css.webp",
     title: '"Login Form CSS" Challenge',
     description: "In this challenge you will create a login form.",
