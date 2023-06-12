@@ -84,7 +84,12 @@ challengesData.forEach(function (challenge) {
   difficultyLi.className = "difficulty";
 
   const difficultyImg = document.createElement("img");
-  difficultyImg.src = "assets/images/dumbbell-weight-beginner.svg";
+
+  if (challenge.difficulty === "Beginner") {
+    difficultyImg.src = "assets/images/dumbbell-weight-beginner.svg";
+  } else if (challenge.difficulty === "Intermediate") {
+    difficultyImg.src = "assets/images/dumbbell-weight-intermediate.svg";
+  }
   difficultyImg.alt = "dumbbell weight";
 
   const difficultySpan = document.createElement("span");
