@@ -57,7 +57,7 @@ challengesData.forEach(function (challenge) {
   const img = document.createElement("img");
   img.src = challenge.thumbnail;
   img.className = "challenge-thumbnail";
-  img.alt = "Challenge image";
+  img.alt = `${challenge.title} image`;
 
   link.appendChild(img);
   article.appendChild(link);
