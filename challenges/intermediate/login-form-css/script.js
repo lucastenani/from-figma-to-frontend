@@ -1,4 +1,4 @@
-const emailInput = document.getElementById("email");
+const mailInput = document.getElementById("email");
 const emailIcon = document.getElementById("email-icon");
 
 const passwordInput = document.getElementById("password");
@@ -12,10 +12,10 @@ passwordInput.addEventListener("blur", () => {
   lockIcon.src = "./images/lock.svg";
 });
 
-emailInput.addEventListener("focus", () => {
+mailInput.addEventListener("focus", () => {
   emailIcon.src = "./images/mail-focus.svg";
 });
 
-emailInput.addEventListener("blur", () => {
+mailInput.addEventListener("blur", () => {
   emailIcon.src = "./images/mail.svg";
 });
