@@ -6,6 +6,10 @@
   --background: #191816;
   --form-background: #24221f;
   --primary-color: #ffc632;
+  --form-border: #868686;
+  --form-input: #a9afb9;
+  --form-button: #473404;
+
   --poppins: "Poppins", sans-serif;
   --roboto: "Roboto", sans-serif;
 }
@@ -34,6 +38,184 @@ aside {
 
 main {
   padding: 40px;
+}
+
+.camp {
+  width: 100%;
+  max-width: 572px;
+  background-color: var(--form-background);
+  margin: 126px auto;
+  padding: 55px 119px;
+  border-radius: 4px;
+}
+
+.camp header {
+  margin-bottom: 27px;
+}
+
+.camp-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h1 {
+  font-family: var(--poppins);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--text-title);
+  margin-bottom: 5px;
+}
+
+.camp-information {
+  font-family: var(--roboto);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-base);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-field label {
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-base);
+}
+
+.form-field input {
+  background-color: var(--form-background);
+  border: 1px solid var(--form-border);
+  color: var(--form-input);
+  border-radius: 4px;
+  padding: 12px 30px;
+}
+
+.form-field input:focus {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 0px 2px #ffde88;
+}
+
+.input-image {
+  position: absolute;
+  top: 57%;
+  left: 6px;
+  pointer-events: none;
+}
+
+#show-password {
+  position: absolute;
+  top: 57%;
+  right: 6px;
+  cursor: pointer;
+}
+
+.form-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.remember {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+#rememberCheck[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--form-background);
+  border: 1px solid var(--form-border);
+  border-radius: 4px;
+}
+
+#rememberCheck[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+#rememberCheck[type="checkbox"]::before {
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  content: "\2713";
+  font-size: 18px;
+  color: var(--form-button);
+  visibility: hidden;
+}
+
+#rememberCheck[type="checkbox"]:checked::before {
+  visibility: visible;
+}
+
+.remember label {
+  font-family: var(--roboto);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--form-input);
+}
+
+.form-links a {
+  text-decoration: none;
+  font-family: var(--poppins);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--primary-color);
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.form-buttons button {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 12px 0;
+  border-radius: 4px;
+  width: 100%;
+  font-family: var(--poppins);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: var(--form-button);
+}
+
+.form-buttons p,
+.form-buttons a {
+  font-family: var(--poppins);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.form-buttons a {
+  font-weight: 600;
 }
 
 aside img {

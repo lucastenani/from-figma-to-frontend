@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Form CSS</title>
     <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -12,6 +13,59 @@
         <header>
           <img src="./images/logo.svg" alt="logo camp.in" />
         </header>
+        <div class="camp">
+          <header>
+            <div class="camp-title">
+              <img src="./images/log-in.svg" alt="" />
+              <h1>Log in</h1>
+            </div>
+            <div class="camp-information">
+              <p>Please provide your registration information.</p>
+            </div>
+          </header>
+          <form>
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" id="email" />
+              <img
+                src="./images/mail.svg"
+                alt="Email icon"
+                id="email-icon"
+                class="input-image"
+              />
+            </div>
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+              <img
+                src="./images/lock.svg"
+                alt="Padlock icon"
+                id="lock-icon"
+                class="input-image"
+              />
+              <img
+                src="./images/eye.svg"
+                alt="Show password"
+                id="show-password"
+              />
+            </div>
+            <div class="form-links">
+              <div class="remember">
+                <input
+                  type="checkbox"
+                  id="rememberCheck"
+                  name="rememberCheck"
+                />
+                <label for="rememberCheck">Remember me</label><br />
+              </div>
+              <a href="#">I forgot my password</a>
+            </div>
+            <div class="form-buttons">
+              <button type="submit">Sign in</button>
+              <p>Don't have an account? <a href="#">Sign up</a></p>
+            </div>
+          </form>
+        </div>
       </main>
       <aside>
         <img
