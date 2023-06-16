@@ -46,68 +46,87 @@ const challengesData = [
 ];
 
 const container = document.getElementById("challenges-container");
+const filterSelect = document.getElementById("filter-select");
 
-challengesData.forEach(function (challenge) {
-  const article = document.createElement("article");
-  article.className = "challenge";
+function renderChallenges() {
+  container.innerHTML = "";
 
-  const link = document.createElement("a");
-  link.href = challenge.link;
+  const selectedDifficulty = filterSelect.value;
 
-  const img = document.createElement("img");
-  img.src = challenge.thumbnail;
-  img.className = "challenge-thumbnail";
-  img.alt = `${challenge.title} image`;
-
-  link.appendChild(img);
-  article.appendChild(link);
-
-  const descriptionDiv = document.createElement("div");
-  descriptionDiv.className = "challenge-description";
-
-  const titleLink = document.createElement("a");
-  titleLink.href = challenge.link;
-
-  const titleHeading = document.createElement("h2");
-  titleHeading.textContent = challenge.title;
-
-  const descriptionParagraph = document.createElement("p");
-  descriptionParagraph.textContent = challenge.description;
-
-  titleLink.appendChild(titleHeading);
-  descriptionDiv.appendChild(titleLink);
-  descriptionDiv.appendChild(descriptionParagraph);
-
-  const ul = document.createElement("ul");
-
-  const difficultyLi = document.createElement("li");
-  difficultyLi.className = "difficulty";
-
-  const difficultyImg = document.createElement("img");
-
-  if (challenge.difficulty === "Beginner") {
-    difficultyImg.src = "assets/images/dumbbell-weight-beginner.svg";
-  } else if (challenge.difficulty === "Intermediate") {
-    difficultyImg.src = "assets/images/dumbbell-weight-intermediate.svg";
-  }
-  difficultyImg.alt = "dumbbell weight";
-
-  const difficultySpan = document.createElement("span");
-  difficultySpan.textContent = challenge.difficulty;
-
-  difficultyLi.appendChild(difficultyImg);
-  difficultyLi.appendChild(difficultySpan);
-
-  ul.appendChild(difficultyLi);
-
-  challenge.tags.forEach(function (tag) {
-    const tagLi = document.createElement("li");
-    tagLi.textContent = tag;
-    ul.appendChild(tagLi);
+  const filteredChallenges = challengesData.filter((challenge) => {
+    if (selectedDifficulty === "All") {
+      return true;
+    } else {
+      return challenge.difficulty === selectedDifficulty;
+    }
   });
 
-  descriptionDiv.appendChild(ul);
-  article.appendChild(descriptionDiv);
+  filteredChallenges.forEach(function (challenge) {
+    const article = document.createElement("article");
+    article.className = "challenge";
 
-  container.appendChild(article);
-});
+    const link = document.createElement("a");
+    link.href = challenge.link;
+
+    const img = document.createElement("img");
+    img.src = challenge.thumbnail;
+    img.className = "challenge-thumbnail";
+    img.alt = `${challenge.title} image`;
+
+    link.appendChild(img);
+    article.appendChild(link);
+
+    const descriptionDiv = document.createElement("div");
+    descriptionDiv.className = "challenge-description";
+
+    const titleLink = document.createElement("a");
+    titleLink.href = challenge.link;
+
+    const titleHeading = document.createElement("h2");
+    titleHeading.textContent = challenge.title;
+
+    const descriptionParagraph = document.createElement("p");
+    descriptionParagraph.textContent = challenge.description;
+
+    titleLink.appendChild(titleHeading);
+    descriptionDiv.appendChild(titleLink);
+    descriptionDiv.appendChild(descriptionParagraph);
+
+    const ul = document.createElement("ul");
+
+    const difficultyLi = document.createElement("li");
+    difficultyLi.className = "difficulty";
+
+    const difficultyImg = document.createElement("img");
+
+    if (challenge.difficulty === "Beginner") {
+      difficultyImg.src = "assets/images/dumbbell-weight-beginner.svg";
+    } else if (challenge.difficulty === "Intermediate") {
+      difficultyImg.src = "assets/images/dumbbell-weight-intermediate.svg";
+    }
+    difficultyImg.alt = "dumbbell weight";
+
+    const difficultySpan = document.createElement("span");
+    difficultySpan.textContent = challenge.difficulty;
+
+    difficultyLi.appendChild(difficultyImg);
+    difficultyLi.appendChild(difficultySpan);
+
+    ul.appendChild(difficultyLi);
+
+    challenge.tags.forEach(function (tag) {
+      const tagLi = document.createElement("li");
+      tagLi.textContent = tag;
+      ul.appendChild(tagLi);
+    });
+
+    descriptionDiv.appendChild(ul);
+    article.appendChild(descriptionDiv);
+
+    container.appendChild(article);
+  });
+}
+
+filterSelect.addEventListener("change", renderChallenges);
+
+renderChallenges();
