@@ -38,6 +38,18 @@ h1 {
   margin-top: 0.62rem;
 }
 
+#filter-select {
+  appearance: none;
+  background-color: rgb(18, 18, 20);
+  border: 1px solid #e1e1e6;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #e1e1e6;
+  cursor: pointer;
+  outline: none;
+}
+
 main {
   max-width: 76rem;
   width: 100%;
