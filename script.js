@@ -2,7 +2,7 @@ const challengesData = [
   {
     link: "challenges/beginner/cookbook/",
     thumbnail: "assets/images/cookbook.webp",
-    title: '"Cookbook" Challenge',
+    title: "Cookbook",
     description:
       "In this challenge, you will recreate a cake recipe page based on the provided Figma design.",
     difficulty: "Beginner",
@@ -11,7 +11,7 @@ const challengesData = [
   {
     link: "challenges/beginner/social-tree/",
     thumbnail: "assets/images/social-tree.webp",
-    title: '"Social Tree" Challenge',
+    title: "Social Tree",
     description:
       "In this challenge you must create a page with a list of links (menu) that can be used in social network profiles to direct the user to the chosen location.",
     difficulty: "Beginner",
@@ -20,7 +20,7 @@ const challengesData = [
   {
     link: "challenges/beginner/portfolio/",
     thumbnail: "assets/images/portfolio.webp",
-    title: '"Portfolio" Challenge',
+    title: "Portfolio",
     description:
       "In this challenge you will be able to create a web page to be your portfolio and resume.",
     difficulty: "Beginner",
@@ -29,7 +29,7 @@ const challengesData = [
   {
     link: "challenges/beginner/rocketnews/",
     thumbnail: "assets/images/rocketnews.webp",
-    title: '"RocketNews" Challenge',
+    title: "RocketNews",
     description:
       "Develop a simple web page that will serve in the future for lead capture or newsletter subscription.",
     difficulty: "Beginner",
@@ -38,7 +38,7 @@ const challengesData = [
   {
     link: "challenges/intermediate/login-form-css/",
     thumbnail: "assets/images/login-form-css.webp",
-    title: '"Login Form CSS" Challenge',
+    title: "Login Form CSS",
     description: "In this challenge you will create a login form.",
     difficulty: "Intermediate",
     tags: ["HTML", "CSS"],
@@ -83,7 +83,7 @@ function renderChallenges() {
     titleLink.href = challenge.link;
 
     const titleHeading = document.createElement("h2");
-    titleHeading.textContent = challenge.title;
+    titleHeading.textContent = `"${challenge.title}" Challenge`;
 
     const descriptionParagraph = document.createElement("p");
     descriptionParagraph.textContent = challenge.description;
