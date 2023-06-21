@@ -1,7 +1,7 @@
 const challengesData = [
   {
-    link: "challenges/beginner/cookbook/",
-    thumbnail: "assets/images/cookbook.webp",
+    link: "cookbook/",
+    thumbnail: "cookbook.webp",
     title: "Cookbook",
     description:
       "In this challenge, you will recreate a cake recipe page based on the provided Figma design.",
@@ -9,8 +9,8 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "challenges/beginner/social-tree/",
-    thumbnail: "assets/images/social-tree.webp",
+    link: "social-tree/",
+    thumbnail: "social-tree.webp",
     title: "Social Tree",
     description:
       "In this challenge you must create a page with a list of links (menu) that can be used in social network profiles to direct the user to the chosen location.",
@@ -18,8 +18,8 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "challenges/beginner/portfolio/",
-    thumbnail: "assets/images/portfolio.webp",
+    link: "portfolio/",
+    thumbnail: "portfolio.webp",
     title: "Portfolio",
     description:
       "In this challenge you will be able to create a web page to be your portfolio and resume.",
@@ -27,8 +27,8 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "challenges/beginner/rocketnews/",
-    thumbnail: "assets/images/rocketnews.webp",
+    link: "rocketnews/",
+    thumbnail: "rocketnews.webp",
     title: "RocketNews",
     description:
       "Develop a simple web page that will serve in the future for lead capture or newsletter subscription.",
@@ -36,10 +36,19 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "challenges/intermediate/login-form-css/",
-    thumbnail: "assets/images/login-form-css.webp",
+    link: "login-form-css/",
+    thumbnail: "login-form-css.webp",
     title: "Login Form CSS",
     description: "In this challenge you will create a login form.",
+    difficulty: "Intermediate",
+    tags: ["HTML", "CSS"],
+  },
+  {
+    link: "rocket-shoes/",
+    thumbnail: "rocket-shoes.webp",
+    title: "RocketShoes",
+    description:
+      "In this challenge you must develop a mini e-commerce for sports shoes.",
     difficulty: "Intermediate",
     tags: ["HTML", "CSS"],
   },
@@ -47,6 +56,85 @@ const challengesData = [
 
 const container = document.getElementById("challenges-container");
 const filterSelect = document.getElementById("filter-select");
+
+function createChallengeLink(difficulty, link) {
+  if (difficulty === "Beginner") {
+    return `challenges/beginner/${link}`;
+  } else if (difficulty === "Intermediate") {
+    return `challenges/intermediate/${link}`;
+  }
+}
+
+function createDifficultyImage(difficulty) {
+  const img = document.createElement("img");
+  img.alt = "dumbbell weight";
+
+  if (difficulty === "Beginner") {
+    img.src = "assets/images/dumbbell-weight-beginner.svg";
+  } else if (difficulty === "Intermediate") {
+    img.src = "assets/images/dumbbell-weight-intermediate.svg";
+  }
+
+  return img;
+}
+
+function createChallengeElement(challenge) {
+  const article = document.createElement("article");
+  article.className = "challenge";
+
+  const link = document.createElement("a");
+  link.href = createChallengeLink(challenge.difficulty, challenge.link);
+
+  const img = document.createElement("img");
+  img.src = `assets/images/${challenge.thumbnail}`;
+  img.className = "challenge-thumbnail";
+  img.alt = `${challenge.title} image`;
+
+  link.appendChild(img);
+  article.appendChild(link);
+
+  const descriptionDiv = document.createElement("div");
+  descriptionDiv.className = "challenge-description";
+
+  const titleLink = document.createElement("a");
+  titleLink.href = createChallengeLink(challenge.difficulty, challenge.link);
+
+  const titleHeading = document.createElement("h2");
+  titleHeading.textContent = `"${challenge.title}" Challenge`;
+
+  const descriptionParagraph = document.createElement("p");
+  descriptionParagraph.textContent = challenge.description;
+
+  titleLink.appendChild(titleHeading);
+  descriptionDiv.appendChild(titleLink);
+  descriptionDiv.appendChild(descriptionParagraph);
+
+  const ul = document.createElement("ul");
+
+  const difficultyLi = document.createElement("li");
+  difficultyLi.className = "difficulty";
+
+  const difficultyImg = createDifficultyImage(challenge.difficulty);
+
+  const difficultySpan = document.createElement("span");
+  difficultySpan.textContent = challenge.difficulty;
+
+  difficultyLi.appendChild(difficultyImg);
+  difficultyLi.appendChild(difficultySpan);
+
+  ul.appendChild(difficultyLi);
+
+  challenge.tags.forEach(function (tag) {
+    const tagLi = document.createElement("li");
+    tagLi.textContent = tag;
+    ul.appendChild(tagLi);
+  });
+
+  descriptionDiv.appendChild(ul);
+  article.appendChild(descriptionDiv);
+
+  return article;
+}
 
 function renderChallenges() {
   container.innerHTML = "";
@@ -62,68 +150,8 @@ function renderChallenges() {
   });
 
   filteredChallenges.forEach(function (challenge) {
-    const article = document.createElement("article");
-    article.className = "challenge";
-
-    const link = document.createElement("a");
-    link.href = challenge.link;
-
-    const img = document.createElement("img");
-    img.src = challenge.thumbnail;
-    img.className = "challenge-thumbnail";
-    img.alt = `${challenge.title} image`;
-
-    link.appendChild(img);
-    article.appendChild(link);
-
-    const descriptionDiv = document.createElement("div");
-    descriptionDiv.className = "challenge-description";
-
-    const titleLink = document.createElement("a");
-    titleLink.href = challenge.link;
-
-    const titleHeading = document.createElement("h2");
-    titleHeading.textContent = `"${challenge.title}" Challenge`;
-
-    const descriptionParagraph = document.createElement("p");
-    descriptionParagraph.textContent = challenge.description;
-
-    titleLink.appendChild(titleHeading);
-    descriptionDiv.appendChild(titleLink);
-    descriptionDiv.appendChild(descriptionParagraph);
-
-    const ul = document.createElement("ul");
-
-    const difficultyLi = document.createElement("li");
-    difficultyLi.className = "difficulty";
-
-    const difficultyImg = document.createElement("img");
-
-    if (challenge.difficulty === "Beginner") {
-      difficultyImg.src = "assets/images/dumbbell-weight-beginner.svg";
-    } else if (challenge.difficulty === "Intermediate") {
-      difficultyImg.src = "assets/images/dumbbell-weight-intermediate.svg";
-    }
-    difficultyImg.alt = "dumbbell weight";
-
-    const difficultySpan = document.createElement("span");
-    difficultySpan.textContent = challenge.difficulty;
-
-    difficultyLi.appendChild(difficultyImg);
-    difficultyLi.appendChild(difficultySpan);
-
-    ul.appendChild(difficultyLi);
-
-    challenge.tags.forEach(function (tag) {
-      const tagLi = document.createElement("li");
-      tagLi.textContent = tag;
-      ul.appendChild(tagLi);
-    });
-
-    descriptionDiv.appendChild(ul);
-    article.appendChild(descriptionDiv);
-
-    container.appendChild(article);
+    const challengeElement = createChallengeElement(challenge);
+    container.appendChild(challengeElement);
   });
 }
 
