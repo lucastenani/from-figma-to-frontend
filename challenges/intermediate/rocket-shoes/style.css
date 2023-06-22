@@ -7,5 +7,15 @@
   --text: #000;
   --footer: #000;
   --text-description: #9c9696;
-  --roboto: font-family: 'Roboto', sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-background);
 }
