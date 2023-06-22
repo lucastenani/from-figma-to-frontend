@@ -4,9 +4,11 @@
   --button: #ff0000;
   --main-background: #c4c4c4;
   --background: #e5e5e5;
+  --background-aside: #ececed;
   --text: #000;
   --footer: #000;
   --text-description: #9c9696;
+  --text-button: #ffffff;
   --roboto: "Roboto", sans-serif;
 }
 
@@ -83,4 +85,89 @@ nav ul {
 header button {
   background-color: transparent;
   border: 0;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+}
+
+aside {
+  padding: 190px 72px 0 111px;
+  background-color: var(--background-aside);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+}
+
+h1 {
+  color: var(--text);
+  font-size: 60px;
+  font-family: var(--roboto);
+  font-weight: 700;
+  max-width: 357px;
+}
+
+.description {
+  color: var(--text-description);
+  font-size: 16px;
+  font-family: var(--roboto);
+  font-weight: 700;
+  max-width: 342px;
+}
+
+.price {
+  color: var(--text);
+  font-size: 40px;
+  font-family: Roboto;
+  font-weight: 700;
+}
+
+aside button {
+  background: var(--button);
+  border: 0;
+  color: var(--text-button);
+  font-size: 24px;
+  font-family: var(--roboto);
+  font-weight: 700;
+  padding: 33px 75px;
+  align-self: flex-start;
+}
+
+section {
+  background-color: var(--main-background);
+  padding: 174px 18px 40px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-product-image {
+  width: 100%;
+  display: flex;
+}
+
+.main-product-image img {
+  width: 100%;
+  max-width: 597px;
+  margin: 0 auto;
+}
+
+.product-image-gallery {
+  width: 100%;
+  max-width: 890px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 37px;
+}
+
+.product-image-gallery img {
+  width: 29%;
+}
+
+.selected {
+  border-bottom: 5px solid var(--button);
 }
