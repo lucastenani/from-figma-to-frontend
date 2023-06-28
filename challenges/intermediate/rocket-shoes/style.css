@@ -343,10 +343,6 @@ footer a {
     gap: 30px;
   }
 
-  footer a {
-    font-size: 18px;
-  }
-
   .video {
     width: 100%;
     max-width: none;
