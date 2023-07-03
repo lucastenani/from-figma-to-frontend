@@ -12,3 +12,15 @@ for (let i = 0; i < smallImg.length; i++) {
     mainImg.src = productImg.src;
   };
 }
+
+const openNav = document.getElementById("bar");
+const closeNav = document.getElementById("close-nav");
+const header = document.getElementsByTagName("header")[0];
+
+openNav.addEventListener("click", () => {
+  header.classList.add("active");
+});
+
+closeNav.addEventListener("click", () => {
+  header.classList.remove("active");
+});

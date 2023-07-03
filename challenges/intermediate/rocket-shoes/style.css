@@ -46,8 +46,8 @@ header {
   padding: 60px 40px;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   background-color: transparent;
 }
 
@@ -99,6 +99,12 @@ header {
 header button {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
+}
+
+#mobile,
+.nav-mobile {
+  display: none;
 }
 
 main {
@@ -150,7 +156,7 @@ aside button {
   align-self: flex-start;
 }
 
-section {
+main section {
   background-color: var(--main-background);
   padding: 174px 18px 40px;
   flex: 2;
@@ -276,23 +282,78 @@ footer a {
   }
 
   header {
-    padding: 20px;
+    background-color: var(--background);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    right: -300px;
+    transform: translateX(0%);
+    height: 100vh;
+    width: 300px;
+
+    padding: 40px 10px 0;
+    transition: 0.4s ease-in-out;
+    z-index: 1000;
+  }
+
+  header.active {
+    right: 0;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #bar,
+  #close-nav {
+    cursor: pointer;
+  }
+
+  .logo {
+    display: none;
   }
 
   .header-nav {
-    gap: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 0;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
   }
 
   .nav-link {
-    color: var(--text);
     font-size: 16px;
+  }
+
+  .desktop-button {
+    display: none;
+  }
+
+  .nav-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    position: sticky;
+    background-color: var(--background);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
   }
 
   aside {
     padding: 90px 40px 15px;
   }
 
-  section {
+  main section {
     padding: 120px 35px 15px;
   }
 
@@ -316,10 +377,6 @@ footer a {
 }
 
 @media screen and (max-width: 500px) {
-  header {
-    display: none;
-  }
-
   main {
     flex-direction: column;
   }
@@ -335,8 +392,8 @@ footer a {
     width: 100%;
   }
 
-  section {
-    padding: 40px 20px 15px;
+  main section {
+    padding: 75px 20px 15px;
   }
 
   footer {
