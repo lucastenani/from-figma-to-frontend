@@ -282,22 +282,31 @@ footer a {
   }
 
   header {
+    display: none;
+  }
+
+  header.active {
+    display: flex;
     background-color: var(--background);
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    right: -300px;
+    right: 0;
     transform: translateX(0%);
     height: 100vh;
     width: 300px;
-
     padding: 40px 10px 0;
-    transition: 0.4s ease-in-out;
     z-index: 1000;
+    animation: slideIn 0.4s ease-in-out;
   }
 
-  header.active {
-    right: 0;
+  @keyframes slideIn {
+    from {
+      right: -300px;
+    }
+    to {
+      right: 0;
+    }
   }
 
   #mobile {

@@ -1,26 +1,31 @@
-let mainImg = document.getElementById("main-image");
-let smallImg = document.getElementsByClassName("small-image");
+const mainImg = document.getElementById("main-image");
+const smallImg = document.getElementsByClassName("small-image");
 let selectedImg = document.querySelector(".selected");
+
+function changeImage(productImg) {
+  selectedImg.classList.remove("selected");
+  selectedImg = productImg;
+  selectedImg.classList.add("selected");
+  mainImg.src = productImg.src;
+}
 
 for (let i = 0; i < smallImg.length; i++) {
   const productImg = smallImg[i];
 
   productImg.onclick = () => {
-    selectedImg.classList.remove("selected");
-    selectedImg = productImg;
-    selectedImg.classList.add("selected");
-    mainImg.src = productImg.src;
+    changeImage(productImg);
   };
 }
 
 const openNav = document.getElementById("bar");
 const closeNav = document.getElementById("close-nav");
-const header = document.getElementsByTagName("header")[0];
+const header = document.querySelector("header");
+const activeClass = "active";
 
 openNav.addEventListener("click", () => {
-  header.classList.add("active");
+  header.classList.add(activeClass);
 });
 
 closeNav.addEventListener("click", () => {
-  header.classList.remove("active");
+  header.classList.remove(activeClass);
 });
