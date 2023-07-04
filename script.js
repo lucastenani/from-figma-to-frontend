@@ -149,13 +149,15 @@ function renderChallenges() {
 
   const selectedDifficulty = filterSelect.value;
 
-  const filteredChallenges = challengesData.filter((challenge) => {
-    if (selectedDifficulty === "All") {
-      return true;
-    } else {
-      return challenge.difficulty === selectedDifficulty;
-    }
-  });
+  const filteredChallenges = challengesData
+    .filter((challenge) => {
+      if (selectedDifficulty === "All") {
+        return true;
+      } else {
+        return challenge.difficulty === selectedDifficulty;
+      }
+    })
+    .reverse();
 
   filteredChallenges.forEach(function (challenge) {
     const challengeElement = createChallengeElement(challenge);
