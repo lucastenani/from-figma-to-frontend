@@ -52,6 +52,14 @@ const challengesData = [
     difficulty: "Intermediate",
     tags: ["HTML", "CSS"],
   },
+  {
+    link: "sidebar/",
+    thumbnail: "sidebar.webp",
+    title: "Sidebar",
+    description: `Create a sidebar that toggles between "open" and "closed" states when the user clicks on the menu icon.`,
+    difficulty: "Intermediate",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
 ];
 
 const container = document.getElementById("challenges-container");
