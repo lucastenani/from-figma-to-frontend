@@ -67,9 +67,9 @@ const filterSelect = document.getElementById("filter-select");
 
 function createChallengeLink(difficulty, link) {
   if (difficulty === "Beginner") {
-    return `challenges/beginner/${link}`;
+    return `challenges/beginner/${link}/index.html`;
   } else if (difficulty === "Intermediate") {
-    return `challenges/intermediate/${link}`;
+    return `challenges/intermediate/${link}/index.html`;
   }
 }
 
