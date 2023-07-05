@@ -4,10 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sidebar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <h1>Sidebar</h1>
+    <header>
+      <div class="nav-header">
+        <img src="./images/logo.svg" alt="VET. logo" class="logo" />
+        <button id="bar">
+          <img src="./images/menu.svg" alt="Open Menu" />
+        </button>
+      </div>
+      <nav>
+        <li>
+          <img src="./images/search.svg" alt="Search Icon" />
+          <p>Search</p>
+        </li>
+        <li>
+          <img src="./images/grid.svg" alt="Dashboard Icon" />
+          <p>Dashboard</p>
+        </li>
+        <li>
+          <img src="./images/pet.svg" alt="Pets Icon" />
+          <p>Pets</p>
+        </li>
+        <li>
+          <img src="./images/user.svg" alt="Clients Icon" />
+          <p>Clients</p>
+        </li>
+        <li>
+          <img src="./images/vet.svg" alt="Vets Icon" />
+          <p>Vets</p>
+        </li>
+        <li>
+          <img src="./images/settings.svg" alt="Settings Icon" />
+          <p>Settings</p>
+        </li>
+      </nav>
+      <div class="user">
+        <img src="./images/photo.webp" alt="User Image" class="user-image" />
+        <div class="user-information">
+          <p class="user-name">Eleanor Pena</p>
+          <p class="user-position">Veterinary</p>
+        </div>
+        <button id="log-out">
+          <img src="./images/log-out.svg" alt="Log Out" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <h1>Dashboard</h1>
+    </main>
   </body>
 </html>
