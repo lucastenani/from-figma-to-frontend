@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--body-bg-color);
+}
+
 header {
   position: fixed;
   top: 0;
@@ -23,6 +27,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: width 0.4s ease-in-out;
 }
 
 header.open-sidebar {
@@ -39,10 +44,6 @@ nav {
   display: none;
 }
 
-header.open-sidebar .logo {
-  display: flex;
-}
-
 .nav-header {
   display: flex;
   align-items: center;
@@ -53,6 +54,7 @@ header.open-sidebar .logo {
 #bar {
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
 
 nav ul {
@@ -67,13 +69,9 @@ nav li {
   cursor: pointer;
   border-radius: 12px;
   padding: 13px;
-  transition: background-color 0.3s ease;
 }
 
-nav li.active {
-  background-color: var(--light-green);
-}
-
+nav li.active,
 nav li:hover {
   background-color: var(--light-green);
 }
@@ -85,10 +83,6 @@ nav li:hover {
   font-weight: 400;
   text-transform: capitalize;
   display: none;
-}
-
-header.open-sidebar .nav-item {
-  display: flex;
 }
 
 .user {
@@ -109,10 +103,6 @@ header.open-sidebar .nav-item {
   border-radius: 12px;
   margin-right: 9px;
   display: none;
-}
-
-header.open-sidebar .user-image {
-  display: flex;
 }
 
 .user-information {
@@ -149,11 +139,31 @@ header.open-sidebar #log-out {
   justify-content: flex-end;
 }
 
+header.open-sidebar .logo,
+header.open-sidebar .nav-item,
+header.open-sidebar .user-image {
+  display: flex;
+  animation-duration: 0.5s;
+  animation-name: fade-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: flex;
+    opacity: 1;
+  }
+}
+
 main {
-  background-color: var(--body-bg-color);
   padding: 20px 18px;
   height: 100vh;
   padding: 20px 18px 0 96px;
+  transition: padding 0.4s ease-in-out;
 }
 
 main.open-sidebar {
