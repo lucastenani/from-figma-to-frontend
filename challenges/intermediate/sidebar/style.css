@@ -18,17 +18,29 @@ header {
   top: 0;
   left: 0;
   height: 100%;
-  width: 250px;
+  width: 78px;
   background: var(--green);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+header.open-sidebar {
+  width: 250px;
+}
+
 nav {
   display: flex;
   flex-direction: column;
   gap: 27px;
+}
+
+.logo {
+  display: none;
+}
+
+header.open-sidebar .logo {
+  display: flex;
 }
 
 .nav-header {
@@ -72,6 +84,11 @@ nav li:hover {
   font-size: 15px;
   font-weight: 400;
   text-transform: capitalize;
+  display: none;
+}
+
+header.open-sidebar .nav-item {
+  display: flex;
 }
 
 .user {
@@ -91,6 +108,11 @@ nav li:hover {
   height: 45px;
   border-radius: 12px;
   margin-right: 9px;
+  display: none;
+}
+
+header.open-sidebar .user-image {
+  display: flex;
 }
 
 .user-information {
@@ -99,6 +121,12 @@ nav li:hover {
   font-weight: 400;
   line-height: normal;
   text-transform: capitalize;
+  display: none;
+  flex-direction: column;
+}
+
+header.open-sidebar .user-information {
+  display: flex;
 }
 
 .user-name {
@@ -113,6 +141,11 @@ nav li:hover {
   background-color: transparent;
   border: 0;
   display: flex;
+
+  justify-content: center;
+}
+
+header.open-sidebar #log-out {
   justify-content: flex-end;
 }
 
@@ -120,6 +153,11 @@ main {
   background-color: var(--body-bg-color);
   padding: 20px 18px;
   height: 100vh;
+  padding: 20px 18px 0 96px;
+}
+
+main.open-sidebar {
+  padding: 20px 18px 0 268px;
 }
 
 h1 {
