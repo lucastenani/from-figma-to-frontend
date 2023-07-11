@@ -1,6 +1,6 @@
 const challengesData = [
   {
-    link: "cookbook/",
+    link: "cookbook",
     thumbnail: "cookbook.webp",
     title: "Cookbook",
     description:
@@ -9,7 +9,7 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "social-tree/",
+    link: "social-tree",
     thumbnail: "social-tree.webp",
     title: "Social Tree",
     description:
@@ -18,7 +18,7 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "portfolio/",
+    link: "portfolio",
     thumbnail: "portfolio.webp",
     title: "Portfolio",
     description:
@@ -27,7 +27,7 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "rocketnews/",
+    link: "rocketnews",
     thumbnail: "rocketnews.webp",
     title: "RocketNews",
     description:
@@ -36,7 +36,7 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "login-form-css/",
+    link: "login-form-css",
     thumbnail: "login-form-css.webp",
     title: "Login Form CSS",
     description: "In this challenge you will create a login form.",
@@ -44,7 +44,7 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "rocket-shoes/",
+    link: "rocket-shoes",
     thumbnail: "rocket-shoes.webp",
     title: "RocketShoes",
     description:
@@ -53,7 +53,7 @@ const challengesData = [
     tags: ["HTML", "CSS"],
   },
   {
-    link: "sidebar/",
+    link: "sidebar",
     thumbnail: "sidebar.webp",
     title: "Sidebar",
     description: `Create a sidebar that toggles between "open" and "closed" states when the user clicks on the menu icon.`,
