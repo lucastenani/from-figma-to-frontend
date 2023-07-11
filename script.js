@@ -60,6 +60,14 @@ const challengesData = [
     difficulty: "Intermediate",
     tags: ["HTML", "CSS", "JavaScript"],
   },
+  {
+    link: "theme-switcher",
+    thumbnail: "theme-switcher.webp",
+    title: "Theme Switcher",
+    description: `A page that contains a toggle to switch between dark and light theme.`,
+    difficulty: "Intermediate",
+    tags: ["HTML", "CSS", "JavaScript"],
+  },
 ];
 
 const container = document.getElementById("challenges-container");
