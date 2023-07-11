@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
 }
 
@@ -8,4 +9,77 @@
   --dark: #292c35;
   --light: #f1f1f1;
   --label: #111;
+  --roboto: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  transition: background-color 0.3s linear;
+}
+
+body.dark {
+  background-color: var(--dark);
+}
+
+header {
+  height: 10vh;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-family: var(--poppins);
+  color: var(--dark);
+  font-size: 25px;
+  font-weight: 500;
+  transition: color 0.3s linear;
+}
+
+body.dark h1 {
+  color: var(--light);
+}
+
+main {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#theme-button {
+  width: 235px;
+  background-color: var(--label);
+  border-radius: 59px;
+  height: 102px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+#checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+#theme-button img {
+  width: 94px;
+  height: 94px;
+}
+
+.ball {
+  background-color: var(--light);
+  border-radius: 50%;
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  left: 10px;
+  transition: left 0.2s linear;
+}
+
+#checkbox:checked + #theme-button .ball {
+  left: 140px;
 }
