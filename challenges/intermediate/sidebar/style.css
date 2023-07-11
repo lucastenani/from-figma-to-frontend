@@ -115,10 +115,6 @@ nav li:hover {
   flex-direction: column;
 }
 
-header.open-sidebar .user-information {
-  display: flex;
-}
-
 .user-name {
   font-size: 15px;
 }
@@ -141,9 +137,10 @@ header.open-sidebar #log-out {
 
 header.open-sidebar .logo,
 header.open-sidebar .nav-item,
-header.open-sidebar .user-image {
+header.open-sidebar .user-image,
+header.open-sidebar .user-information {
   display: flex;
-  animation-duration: 0.5s;
+  animation-duration: 3s;
   animation-name: fade-in;
   animation-fill-mode: forwards;
 }
