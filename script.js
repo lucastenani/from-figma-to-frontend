@@ -68,6 +68,14 @@ const challengesData = [
     difficulty: "Intermediate",
     tags: ["HTML", "CSS", "JavaScript"],
   },
+  {
+    link: "nfts",
+    thumbnail: "NFTs.webp",
+    title: "Rocket NFTs",
+    description: `In this challenge you must build a complete landing page about NFTs.`,
+    difficulty: "Advanced",
+    tags: ["HTML", "CSS"],
+  },
 ];
 
 const container = document.getElementById("challenges-container");
@@ -78,6 +86,8 @@ function createChallengeLink(difficulty, link) {
     return `challenges/beginner/${link}/index.html`;
   } else if (difficulty === "Intermediate") {
     return `challenges/intermediate/${link}/index.html`;
+  } else if (difficulty === "Advanced") {
+    return `challenges/advanced/${link}/index.html`;
   }
 }
 
@@ -89,8 +99,9 @@ function createDifficultyImage(difficulty) {
     img.src = "assets/images/dumbbell-weight-beginner.svg";
   } else if (difficulty === "Intermediate") {
     img.src = "assets/images/dumbbell-weight-intermediate.svg";
+  } else if (difficulty === "Advanced") {
+    img.src = "assets/images/dumbbell-weight-advanced.svg";
   }
-
   return img;
 }
 
