@@ -2,19 +2,16 @@ const checkButton = document.getElementById("checkbox");
 const body = document.querySelector("body").classList;
 const localStorageKey = "themeState";
 const savedState = localStorage.getItem(localStorageKey);
+const prefersDarkTheme =
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-if (savedState === "true") {
-  checkButton.checked = true;
-  body.add("dark");
-} else {
-  checkButton.checked = false;
-  body.remove("dark");
-}
+checkButton.checked = savedState === "true" || prefersDarkTheme;
+body.toggle("dark", checkButton.checked);
 
 checkButton.addEventListener("change", () => {
-  let isCheck = checkButton.checked;
+  const isCheck = checkButton.checked;
 
-  isCheck ? body.add("dark") : body.remove("dark");
-
+  body.toggle("dark", isCheck);
   localStorage.setItem(localStorageKey, isCheck);
 });
