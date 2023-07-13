@@ -18,6 +18,8 @@
 
 body {
   background-color: var(--body-background);
+  color: var(--text-color);
+  font-family: var(--montserrat);
 }
 
 header {
@@ -56,7 +58,6 @@ nav {
 
 .nav-item {
   color: var(--text-color);
-  font-family: var(--montserrat);
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
@@ -94,6 +95,85 @@ nav {
 
 #sidebar {
   display: none;
+}
+
+main {
+  width: 100vw;
+  padding-bottom: 156px;
+}
+
+section {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 80px;
+  margin: 0 auto;
+  height: 10px;
+}
+
+.discover {
+  background-image: url(./images/background.png);
+  background-repeat: repeat;
+  background-position: center;
+}
+
+.discover article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  padding: 197px 80px 0 80px;
+  margin: 0 auto;
+}
+
+.discover-description {
+  max-width: 401px;
+}
+
+.discover-description > p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 55px;
+}
+
+.discover-artists {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.discover-artists p {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.discover-artists p span {
+  font-weight: 700;
+}
+
+h1 {
+  max-width: 533px;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h1 span {
+  color: #ff5b50;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px 10px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  border: 1px solid var(--text-color);
 }
 
 @media screen and (max-width: 1100px) {
