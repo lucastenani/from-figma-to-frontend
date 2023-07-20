@@ -107,7 +107,6 @@ section {
   max-width: 1600px;
   padding: 0 80px;
   margin: 0 auto;
-  height: 10px;
 }
 
 .discover {
@@ -184,6 +183,69 @@ h1 span {
   transform: scale(1.1);
 }
 
+.sales {
+  border-bottom: 1px solid var(--subtitle-color);
+  display: flex;
+}
+
+.sales-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 113px 60px;
+  border-right: 1px solid var(--subtitle-color);
+}
+
+.number {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.type {
+  color: var(--subtitle-color);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sales-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sales-description-text {
+  display: flex;
+  justify-content: center;
+}
+
+.sales-description-text div {
+  padding: 80px 50px 70px;
+}
+
+.sales-description-text p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 63px;
+}
+
+.sales-description-text p a {
+  color: var(--color-logo);
+}
+
+.sales-description-link {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.sales-description img {
+  width: 100%;
+  max-width: 1192px;
+}
+
 @media screen and (max-width: 1100px) {
   header {
     padding: 57px 60px;
@@ -223,6 +285,29 @@ h1 span {
 
   .gallery img:hover {
     transform: scale(1);
+  }
+
+  section {
+    padding: 0px 25px;
+  }
+
+  .sales {
+    flex-direction: column;
+  }
+
+  .sales-numbers {
+    gap: 50px;
+    padding: 60px 40px;
+    border-right: 0;
+    border-bottom: 1px solid var(--subtitle-color);
+  }
+
+  .sales-description-text {
+    flex-wrap: wrap;
+  }
+
+  .sales-description-text div {
+    padding: 35px 5px;
   }
 }
 
