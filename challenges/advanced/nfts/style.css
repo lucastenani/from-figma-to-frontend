@@ -246,6 +246,79 @@ h1 span {
   max-width: 1192px;
 }
 
+.popular-nfts {
+  padding: 155px 80px;
+}
+
+.popular-nfts-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 171px;
+}
+
+.popular-nfts-title span {
+  color: var(--color-logo);
+}
+
+.popular-nfts-week {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.popular-nfts-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 63px;
+}
+
+.nft-info,
+.nft-artist-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nft-info {
+  margin-bottom: 44px;
+}
+
+.nft-name {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.nft-artist-info {
+  margin-bottom: 26px;
+}
+
+.nft-artist-name {
+  color: var(--subtitle-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nft-artist-price {
+  color: var(--color-logo);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.nft-image {
+  width: 100%;
+  max-width: 350px;
+}
+
+.popular-nfts-column {
+  height: 718px;
+  border-left: 1px solid var(--subtitle-color); /* Aumenta a largura da linha para 3px */
+}
+
 @media screen and (max-width: 1100px) {
   header {
     padding: 57px 60px;
@@ -309,6 +382,27 @@ h1 span {
   .sales-description-text div {
     padding: 35px 5px;
   }
+
+  .popular-nfts-week {
+    flex-direction: column;
+  }
+
+  .popular-nfts-items,
+  article.nft-item {
+    width: 100%;
+  }
+
+  .popular-nfts-title {
+    margin-bottom: 50px;
+  }
+
+  .popular-nfts-column {
+    display: none;
+  }
+
+  .nft-image {
+    max-width: none;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -324,5 +418,9 @@ h1 span {
 
   .gallery img {
     width: 100%;
+  }
+
+  .popular-nfts {
+    padding: 50px 30px;
   }
 }
