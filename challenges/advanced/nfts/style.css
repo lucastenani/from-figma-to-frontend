@@ -250,14 +250,17 @@ h1 span {
   padding: 155px 80px;
 }
 
-.popular-nfts-title {
+h2 {
   font-size: 50px;
   font-weight: 700;
-  margin-bottom: 171px;
 }
 
-.popular-nfts-title span {
+h2 span {
   color: var(--color-logo);
+}
+
+.popular-nfts-title {
+  margin-bottom: 171px;
 }
 
 .popular-nfts-week {
@@ -319,6 +322,71 @@ h1 span {
   border-left: 1px solid var(--subtitle-color); /* Aumenta a largura da linha para 3px */
 }
 
+.top-artists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+
+.top-artists-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 111px;
+  flex-wrap: wrap;
+}
+
+.top-artists-item {
+  background-color: var(--card-color);
+  flex-basis: calc((100% - 222px) / 3);
+  padding: 25px 32px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  cursor: pointer;
+}
+
+.featured-artist {
+  background-color: var(--color-logo);
+}
+
+.top-artist-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.top-artist-amount-photos {
+  color: var(--color-logo);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.featured-artist .top-artist-amount-photos {
+  color: var(--text-color);
+}
+
+.top-artists-link {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+.top-artists-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -29px;
+  width: 20px;
+  height: 20px;
+  background-image: url("./images/arrow-orange.svg");
+  background-size: cover;
+}
+
 @media screen and (max-width: 1100px) {
   header {
     padding: 57px 60px;
@@ -326,6 +394,10 @@ h1 span {
 
   .nav-list {
     gap: 30px;
+  }
+
+  .top-artists-item {
+    flex-basis: calc((100% - 222px) / 2);
   }
 }
 
@@ -403,6 +475,19 @@ h1 span {
   .nft-image {
     max-width: none;
   }
+
+  .top-artists {
+    gap: 60px;
+  }
+
+  .top-artists-list {
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .top-artists-item {
+    flex-basis: 45%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -422,5 +507,9 @@ h1 span {
 
   .popular-nfts {
     padding: 50px 30px;
+  }
+
+  .top-artists-item {
+    flex-basis: 100%;
   }
 }
